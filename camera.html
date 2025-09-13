@@ -1,0 +1,287 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Caméras de Sécurité - Unlimited Network Solutions</title>
+
+  <!-- Bootstrap -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+
+  <style>
+    :root {
+      --uns-blue: #0d2c54;
+      --uns-orange: #fca311;
+      --uns-light: #f8f9fa;
+    }
+
+    body {
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    }
+
+    /* Navbar */
+    .navbar {
+      background-color: #fff;
+      border-bottom: 1px solid #e7e7e7;
+    }
+    .navbar-brand .logo-main {
+      font-weight: 800;
+      color: var(--uns-blue);
+    }
+    .navbar-brand .logo-sub {
+      font-size: 0.7em;
+      font-weight: 600;
+      color: var(--uns-orange);
+      display: block;
+    }
+
+    /* Hero */
+    .hero-section {
+      background: linear-gradient(to right, var(--uns-blue), #163d6d);
+      color: white;
+      text-align: center;
+      padding: 5rem 1rem;
+      position: relative;
+      overflow: hidden;
+    }
+    .hero-section h1 {
+      font-size: 3rem;
+      font-weight: bold;
+    }
+    .hero-section p {
+      font-size: 1.2rem;
+      opacity: 0.9;
+    }
+    .hero-section::after {
+      content: "🎥";
+      font-size: 8rem;
+      position: absolute;
+      right: 20px;
+      bottom: -10px;
+      opacity: 0.1;
+    }
+
+    /* Services */
+    .camera-card {
+      background: #fff;
+      border-radius: 15px;
+      padding: 2rem;
+      text-align: center;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+      transition: all 0.3s ease;
+      height: 100%;
+    }
+    .camera-card:hover {
+      transform: translateY(-5px) scale(1.02);
+      border: 1px solid var(--uns-orange);
+      background-color: #fdfdfd;
+    }
+    .camera-card i {
+      font-size: 3rem;
+      color: var(--uns-orange);
+      margin-bottom: 1rem;
+    }
+    .camera-card h5 {
+      color: var(--uns-blue);
+      font-weight: 600;
+    }
+
+    /* Avantages */
+    .advantages {
+      background: var(--uns-light);
+      padding: 4rem 1rem;
+    }
+    .advantage-box {
+      text-align: center;
+      padding: 2rem;
+    }
+    .advantage-box i {
+      font-size: 3rem;
+      color: var(--uns-orange);
+      margin-bottom: 1rem;
+    }
+    .advantage-box h6 {
+      font-weight: 600;
+      color: var(--uns-blue);
+    }
+
+    /* Footer */
+    footer {
+      background-color: #0d2c54;
+      color: white;
+      padding: 2rem 0;
+      margin-top: 3rem;
+    }
+    footer a {
+      color: var(--uns-orange);
+      text-decoration: none;
+    }
+    footer a:hover {
+      text-decoration: underline;
+    }
+    .footer-bottom {
+      text-align: center;
+      padding-top: 1rem;
+      font-size: 0.9rem;
+      border-top: 1px solid rgba(255,255,255,0.2);
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Navbar -->
+  <nav class="navbar navbar-expand-lg fixed-top">
+    <div class="container">
+      <a class="navbar-brand d-flex align-items-center" href="index.html">
+        <!-- Logo -->
+        <img src="assets/image/logo.png" alt="Logo Unlimited Network Solutions" width="50" height="50" class="me-2">
+        
+        <!-- Texte Entreprise -->
+        <div class="d-flex flex-column lh-1">
+            <span class="fw-bold" style="color:#0d1b4c; font-size:20px;">UNLIMITED</span>
+            <span style="color:#f7931e; font-size:14px;">NETWORK SOLUTIONS</span>
+        </div>
+      </a>
+
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
+        <ul class="navbar-nav">
+          <li class="nav-item"><a class="nav-link" href="index.html#accueil">Accueil</a></li>
+          <li class="nav-item"><a class="nav-link active" href="index.html#services">Services</a></li>
+          <li class="nav-item"><a class="nav-link" href="index.html#apropos">À propos</a></li>
+          <li class="nav-item"><a class="nav-link" href="index.html#contact">Contact</a></li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Hero -->
+  <section class="hero-section mt-5">
+    <div class="container">
+      <h1>Caméras de Sécurité</h1>
+      <p>Surveillez et protégez vos locaux avec des solutions de vidéosurveillance modernes et intelligentes.</p>
+    </div>
+  </section>
+
+  <!-- Services caméra -->
+  <section class="py-5">
+    <div class="container">
+      <div class="row g-4">
+
+        <div class="col-md-4">
+          <div class="camera-card">
+            <i class="bi bi-camera-video"></i>
+            <h5>Caméras IP</h5>
+            <p>Images haute définition accessibles à distance via internet et mobiles.</p>
+          </div>
+        </div>
+
+        <div class="col-md-4">
+          <div class="camera-card">
+            <i class="bi bi-hdd-network"></i>
+            <h5>Systèmes DVR/NVR</h5>
+            <p>Enregistrement en continu et consultation sécurisée des vidéos.</p>
+          </div>
+        </div>
+
+        <div class="col-md-4">
+          <div class="camera-card">
+            <i class="bi bi-shield-lock"></i>
+            <h5>Surveillance Intelligente</h5>
+            <p>Détection de mouvements, alertes instantanées et analyse intelligente.</p>
+          </div>
+        </div>
+
+        <div class="col-md-4">
+          <div class="camera-card">
+            <i class="bi bi-cloud-check"></i>
+            <h5>Stockage Cloud</h5>
+            <p>Conservez vos enregistrements en toute sécurité dans le cloud.</p>
+          </div>
+        </div>
+
+        <div class="col-md-4">
+          <div class="camera-card">
+            <i class="bi bi-phone"></i>
+            <h5>Accès Mobile</h5>
+            <p>Visualisez vos caméras depuis n’importe où grâce à votre smartphone.</p>
+          </div>
+        </div>
+
+        <div class="col-md-4">
+          <div class="camera-card">
+            <i class="bi bi-broadcast"></i>
+            <h5>Surveillance 24/7</h5>
+            <p>Solutions fiables et adaptées pour une protection continue de vos biens.</p>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- Avantages -->
+  <section class="advantages">
+    <div class="container">
+      <div class="row g-4">
+        <div class="col-md-3 advantage-box">
+          <i class="bi bi-eye"></i>
+          <h6>Vision Globale</h6>
+          <p>Surveillez en temps réel toutes vos installations.</p>
+        </div>
+        <div class="col-md-3 advantage-box">
+          <i class="bi bi-shield-check"></i>
+          <h6>Sécurité</h6>
+          <p>Protégez vos employés et vos biens efficacement.</p>
+        </div>
+        <div class="col-md-3 advantage-box">
+          <i class="bi bi-phone-vibrate"></i>
+          <h6>Alertes Instantanées</h6>
+          <p>Recevez des notifications dès qu’un incident est détecté.</p>
+        </div>
+        <div class="col-md-3 advantage-box">
+          <i class="bi bi-person-badge"></i>
+          <h6>Expertise</h6>
+          <p>Installation et configuration par des professionnels qualifiés.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer>
+    <div class="container">
+      <div class="row">
+        <div class="col-md-4 mb-3">
+          <h5>Unlimited Network Solutions</h5>
+          <p>Votre partenaire de confiance pour toutes vos solutions informatiques et réseaux.</p>
+        </div>
+        <div class="col-md-4 mb-3">
+          <h5>Liens rapides</h5>
+          <ul class="list-unstyled">
+            <li><a href="index.html#accueil">Accueil</a></li>
+            <li><a href="index.html#services">Nos services</a></li>
+            <li><a href="index.html#apropos">À propos</a></li>
+            <li><a href="index.html#contact">Contact</a></li>
+          </ul>
+        </div>
+        <div class="col-md-4 mb-3">
+          <h5>Suivez-nous</h5>
+          <a href="#"><i class="bi bi-facebook fs-4 me-2"></i></a>
+          <a href="#"><i class="bi bi-twitter fs-4 me-2"></i></a>
+          <a href="#"><i class="bi bi-linkedin fs-4"></i></a>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        © 2025 Unlimited Network Solutions - Tous droits réservés
+      </div>
+    </div>
+  </footer>
+
+  <!-- Bootstrap JS -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>

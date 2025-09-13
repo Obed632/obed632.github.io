@@ -1,0 +1,287 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Solutions WiFi Professionnelles - Unlimited Network Solutions</title>
+
+  <!-- Bootstrap -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+
+  <style>
+    :root {
+      --uns-blue: #0d2c54;
+      --uns-orange: #fca311;
+      --uns-light: #f8f9fa;
+    }
+
+    body {
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    }
+
+    /* Navbar */
+    .navbar {
+      background-color: #fff;
+      border-bottom: 1px solid #e7e7e7;
+    }
+    .navbar-brand .logo-main {
+      font-weight: 800;
+      color: var(--uns-blue);
+    }
+    .navbar-brand .logo-sub {
+      font-size: 0.7em;
+      font-weight: 600;
+      color: var(--uns-orange);
+      display: block;
+    }
+
+    /* Hero */
+    .hero-section {
+      background: linear-gradient(to right, var(--uns-blue), #163d6d);
+      color: white;
+      text-align: center;
+      padding: 5rem 1rem;
+      position: relative;
+      overflow: hidden;
+    }
+    .hero-section h1 {
+      font-size: 3rem;
+      font-weight: bold;
+    }
+    .hero-section p {
+      font-size: 1.2rem;
+      opacity: 0.9;
+    }
+    .hero-section::after {
+      content: "📶";
+      font-size: 8rem;
+      position: absolute;
+      right: 20px;
+      bottom: -10px;
+      opacity: 0.1;
+    }
+
+    /* Services */
+    .service-card {
+      background: #fff;
+      border-radius: 15px;
+      padding: 2rem;
+      text-align: center;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+      transition: all 0.3s ease;
+      height: 100%;
+    }
+    .service-card:hover {
+      transform: translateY(-5px) scale(1.02);
+      border: 1px solid var(--uns-orange);
+      background-color: #fdfdfd;
+    }
+    .service-card i {
+      font-size: 3rem;
+      color: var(--uns-orange);
+      margin-bottom: 1rem;
+    }
+    .service-card h5 {
+      color: var(--uns-blue);
+      font-weight: 600;
+    }
+
+    /* Avantages WiFi */
+    .advantages {
+      background: var(--uns-light);
+      padding: 4rem 1rem;
+    }
+    .advantage-box {
+      text-align: center;
+      padding: 2rem;
+    }
+    .advantage-box i {
+      font-size: 3rem;
+      color: var(--uns-orange);
+      margin-bottom: 1rem;
+    }
+    .advantage-box h6 {
+      font-weight: 600;
+      color: var(--uns-blue);
+    }
+
+    /* Footer */
+    footer {
+      background-color: #0d2c54;
+      color: white;
+      padding: 2rem 0;
+      margin-top: 3rem;
+    }
+    footer a {
+      color: var(--uns-orange);
+      text-decoration: none;
+    }
+    footer a:hover {
+      text-decoration: underline;
+    }
+    .footer-bottom {
+      text-align: center;
+      padding-top: 1rem;
+      font-size: 0.9rem;
+      border-top: 1px solid rgba(255,255,255,0.2);
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Navbar -->
+  <nav class="navbar navbar-expand-lg fixed-top">
+    <div class="container">
+      <a class="navbar-brand d-flex align-items-center" href="index.html">
+        <!-- Logo -->
+        <img src="assets/image/logo.png" alt="Logo Unlimited Network Solutions" width="50" height="50" class="me-2">
+        
+        <!-- Texte Entreprise -->
+        <div class="d-flex flex-column lh-1">
+            <span class="fw-bold" style="color:#0d1b4c; font-size:20px;">UNLIMITED</span>
+            <span style="color:#f7931e; font-size:14px;">NETWORK SOLUTIONS</span>
+        </div>
+      </a>
+
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
+        <ul class="navbar-nav">
+          <li class="nav-item"><a class="nav-link" href="index.html#accueil">Accueil</a></li>
+          <li class="nav-item"><a class="nav-link active" href="index.html#services">Services</a></li>
+          <li class="nav-item"><a class="nav-link" href="index.html#apropos">À propos</a></li>
+          <li class="nav-item"><a class="nav-link" href="index.html#contact">Contact</a></li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Hero -->
+  <section class="hero-section mt-5">
+    <div class="container">
+      <h1>Solutions WiFi Professionnelles</h1>
+      <p>Une connectivité rapide, fiable et sécurisée pour vos bureaux, commerces et espaces publics.</p>
+    </div>
+  </section>
+
+  <!-- Services WiFi -->
+  <section class="py-5">
+    <div class="container">
+      <div class="row g-4">
+        
+        <div class="col-md-4">
+          <div class="service-card">
+            <i class="bi bi-wifi"></i>
+            <h5>WiFi Entreprise</h5>
+            <p>Un réseau sans fil haute performance adapté aux besoins de votre entreprise.</p>
+          </div>
+        </div>
+
+        <div class="col-md-4">
+          <div class="service-card">
+            <i class="bi bi-shop"></i>
+            <h5>WiFi Public</h5>
+            <p>Offrez un accès internet sécurisé à vos clients dans vos commerces et espaces publics.</p>
+          </div>
+        </div>
+
+        <div class="col-md-4">
+          <div class="service-card">
+            <i class="bi bi-building"></i>
+            <h5>WiFi Multi-étages</h5>
+            <p>Des solutions optimisées pour couvrir des immeubles et espaces complexes.</p>
+          </div>
+        </div>
+
+        <div class="col-md-4">
+          <div class="service-card">
+            <i class="bi bi-router"></i>
+            <h5>WiFi Haut Débit</h5>
+            <p>Connexion ultra-rapide pour vos applications critiques et visioconférences.</p>
+          </div>
+        </div>
+
+        <div class="col-md-4">
+          <div class="service-card">
+            <i class="bi bi-shield-lock"></i>
+            <h5>WiFi Sécurisé</h5>
+            <p>Protégez vos données et vos utilisateurs avec des protocoles de sécurité avancés.</p>
+          </div>
+        </div>
+
+        <div class="col-md-4">
+          <div class="service-card">
+            <i class="bi bi-cloud-arrow-up"></i>
+            <h5>WiFi Cloud</h5>
+            <p>Gestion centralisée de vos points d’accès via le cloud pour plus de flexibilité.</p>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- Avantages WiFi -->
+  <section class="advantages">
+    <div class="container">
+      <div class="row g-4">
+        <div class="col-md-3 advantage-box">
+          <i class="bi bi-speedometer2"></i>
+          <h6>Vitesse Maximale</h6>
+          <p>Des débits adaptés aux besoins modernes.</p>
+        </div>
+        <div class="col-md-3 advantage-box">
+          <i class="bi bi-arrows-fullscreen"></i>
+          <h6>Couverture Totale</h6>
+          <p>Un signal fort même dans les zones difficiles.</p>
+        </div>
+        <div class="col-md-3 advantage-box">
+          <i class="bi bi-lock"></i>
+          <h6>Sécurité Avancée</h6>
+          <p>Protocole WPA3, segmentation des réseaux invités.</p>
+        </div>
+        <div class="col-md-3 advantage-box">
+          <i class="bi bi-gear"></i>
+          <h6>Maintenance Simplifiée</h6>
+          <p>Gestion et surveillance à distance.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer>
+    <div class="container">
+      <div class="row">
+        <div class="col-md-4 mb-3">
+          <h5>Unlimited Network Solutions</h5>
+          <p>Votre partenaire de confiance pour toutes vos solutions informatiques et réseaux.</p>
+        </div>
+        <div class="col-md-4 mb-3">
+          <h5>Liens rapides</h5>
+          <ul class="list-unstyled">
+            <li><a href="index.html#accueil">Accueil</a></li>
+            <li><a href="index.html#services">Nos services</a></li>
+            <li><a href="index.html#apropos">À propos</a></li>
+            <li><a href="index.html#contact">Contact</a></li>
+          </ul>
+        </div>
+        <div class="col-md-4 mb-3">
+          <h5>Suivez-nous</h5>
+          <a href="#"><i class="bi bi-facebook fs-4 me-2"></i></a>
+          <a href="#"><i class="bi bi-twitter fs-4 me-2"></i></a>
+          <a href="#"><i class="bi bi-linkedin fs-4"></i></a>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        © 2025 Unlimited Network Solutions - Tous droits réservés
+      </div>
+    </div>
+  </footer>
+
+  <!-- Bootstrap JS -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>

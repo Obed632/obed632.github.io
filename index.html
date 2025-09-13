@@ -1,0 +1,482 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Unlimited Network Solutions</title>
+
+  <!-- Bootstrap & Icons -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+
+  <style>
+    :root {
+      --uns-blue: #0d2c54;
+      --uns-orange: #fca311;
+      --uns-grid: rgba(255, 255, 255, 0.07);
+      --uns-light-grey: #f8f9fa;
+    }
+
+    body {
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      scroll-behavior: smooth;
+      padding-top: 70px; /* pour la navbar fixée */
+    }
+
+    /* Navbar */
+    .navbar {
+      background-color: #f8f9fa;
+      border-bottom: 1px solid #e7e7e7;
+    }
+    .navbar-brand .logo-main {
+      font-weight: 800;
+      color: var(--uns-blue);
+    }
+    .navbar-brand .logo-sub {
+      font-size: 0.7em;
+      font-weight: 600;
+      color: var(--uns-orange);
+      letter-spacing: 0.5px;
+      display: block;
+      line-height: 1;
+    }
+    .nav-link {
+      font-weight: 500;
+    }
+
+    /* Section Héros */
+    .hero-section {
+      background-color: var(--uns-blue);
+      background-image:
+        linear-gradient(var(--uns-grid) 1px, transparent 1px),
+        linear-gradient(90deg, var(--uns-grid) 1px, transparent 1px);
+      background-size: 2.5rem 2.5rem;
+      color: white;
+      padding: 8rem 0;
+    }
+    .hero-section h1 {
+      font-size: 3.5rem;
+      font-weight: 700;
+    }
+    .hero-section .highlight {
+      color: var(--uns-orange);
+    }
+    .hero-section p {
+      font-size: 1.25rem;
+      max-width: 600px;
+      margin: 1.5rem auto 2.5rem auto;
+      opacity: 0.9;
+    }
+
+    /* Boutons */
+    .btn-custom-warning {
+      background-color: var(--uns-orange);
+      border-color: var(--uns-orange);
+      color: #fff;
+      font-weight: 600;
+      padding: 0.75rem 1.5rem;
+      border-radius: 50px;
+    }
+    .btn-custom-warning:hover {
+      background-color: #e0910b;
+      border-color: #e0910b;
+      color: #fff;
+    }
+    .btn-custom-outline {
+      border-color: #fff;
+      color: #fff;
+      font-weight: 600;
+      padding: 0.75rem 1.5rem;
+      border-radius: 50px;
+      border-width: 2px;
+    }
+    .btn-custom-outline:hover {
+      background-color: #fff;
+      color: var(--uns-blue);
+    }
+
+    /* Services */
+    .bg-night {
+      background-color: #0B1F3A !important;
+    }
+    .text-orange {
+      color: #FFA500 !important;
+    }
+    .service-card {
+      background-color: #ffffff;
+      color: #0B1F3A;
+      border-radius: 15px;
+      padding: 20px 30px;
+      min-width: 260px;
+      max-width: 300px;
+      text-align: center;
+      font-weight: bold;
+      transition: all 0.3s ease;
+      box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+      position: relative;
+    }
+    .service-card:hover {
+      transform: scale(1.05);
+      background-color: #FFA500;
+      color: #ffffff;
+    }
+    .service-card i {
+      font-size: 40px;
+      color: orange;
+      transition: color 0.3s ease;
+    }
+    .service-card:hover i {
+      color: white !important;
+    }
+
+    /* Cercle + */
+    .plus-circle {
+      width: 40px;
+      height: 40px;
+      border-radius: 50%;
+      background: var(--uns-orange);
+      color: white;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      margin: 15px auto 0;
+      font-size: 1.5rem;
+      cursor: pointer;
+      transition: all 0.3s ease;
+      text-decoration: none;
+      border: 2px solid transparent;
+    }
+    .plus-circle:hover {
+      background: var(--uns-orange);
+      border: 2px solid white;
+    }
+
+    /* À propos */
+    .why-choose-section {
+      padding: 5rem 0;
+      background-color: var(--uns-light-grey);
+    }
+    .why-choose-section h2 {
+      color: var(--uns-blue);
+      font-size: 2.8rem;
+      font-weight: 700;
+      margin-bottom: 0.5rem;
+    }
+    .why-choose-section .highlight-orange {
+      color: var(--uns-orange);
+    }
+    .why-choose-section .subtitle {
+      font-size: 1.15rem;
+      color: #6c757d;
+      margin-bottom: 3rem;
+    }
+    .benefit-card {
+      background-color: #fff;
+      border-radius: 15px;
+      box-shadow: 0 4px 15px rgba(0, 0, 0, 0.05);
+      padding: 2.5rem 1.5rem;
+      text-align: center;
+      border: none;
+      height: 100%;
+      transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+    }
+    .benefit-card:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 8px 25px rgba(0, 0, 0, 0.1);
+    }
+    .benefit-card .icon-wrapper {
+      background-color: var(--uns-orange);
+      width: 80px;
+      height: 80px;
+      border-radius: 50%;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      margin: 0 auto 1.5rem auto;
+    }
+    .benefit-card .icon-wrapper i {
+      color: #fff;
+      font-size: 2.5rem;
+    }
+
+    /* Contact */
+    .contact-section {
+      background-color: #0d2c54;
+      color: white;
+      padding: 5rem 0;
+    }
+    .contact-section .card {
+      background-color: rgba(255, 255, 255, 0.1);
+      border: 1px solid white;
+      max-width: 900px;
+      margin: auto;
+      padding: 2rem !important;
+      backdrop-filter: blur(10px);
+    }
+    .contact-info-column h2, .quote-form-column h2 {
+      color: #fca311;
+    }
+    .btn-primary.btn-orange {
+      background-color: #fca311;
+      border-color: #fca311;
+      color: white;
+      font-weight: bold;
+    }
+    .btn-primary.btn-orange:hover {
+      background-color: #e0910b;
+      border-color: #e0910b;
+    }
+
+    /* Footer */
+    footer {
+      background-color: #0d2c54;
+      color: #fff;
+      padding: 2rem 0;
+    }
+    footer a {
+      color: #fca311;
+      text-decoration: none;
+    }
+    footer a:hover {
+      text-decoration: underline;
+    }
+    .footer-bottom {
+      border-top: 1px solid rgba(255,255,255,0.2);
+      margin-top: 1rem;
+      padding-top: 1rem;
+      font-size: 0.9rem;
+      text-align: center;
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Navbar fixée -->
+  <header>
+    <nav class="navbar navbar-expand-lg fixed-top shadow-sm">
+      <div class="container">
+        <a class="navbar-brand d-flex align-items-center" href="index.html">
+          <!-- Logo -->
+          <img src="assets/image/logo.png" alt="Logo Unlimited Network Solutions" width="50" height="50" class="me-2">
+          
+          <!-- Texte Entreprise -->
+          <div class="d-flex flex-column lh-1">
+            <span class="fw-bold" style="color:#0d1b4c; font-size:20px;">UNLIMITED</span>
+            <span style="color:#f7931e; font-size:14px;">NETWORK SOLUTIONS</span>
+          </div>
+        </a>
+
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
+          <ul class="navbar-nav">
+            <li class="nav-item"><a class="nav-link active" href="#accueil">Accueil</a></li>
+            <li class="nav-item"><a class="nav-link" href="#services">Nos services</a></li>
+            <li class="nav-item"><a class="nav-link" href="#apropos">À propos</a></li>
+            <li class="nav-item"><a class="nav-link" href="#contact">Contact</a></li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+  </header>
+
+  <main>
+    <!-- Accueil -->
+    <section id="accueil" class="hero-section text-center">
+      <div class="container">
+        <h1>Prestataire de <span class="highlight">services informatiques</span> pour votre entreprise</h1>
+        <p>Des solutions réseau innovantes pour propulser votre business vers le futur</p>
+        <div class="d-flex flex-column flex-sm-row justify-content-center gap-3">
+          <a href="#contact" class="btn btn-custom-warning"><i class="bi bi-telephone-fill me-2"></i>Nous contacter</a>
+          <a href="#services" class="btn btn-custom-outline"><i class="bi bi-arrow-down me-2"></i>Découvrir nos services</a>
+        </div>
+      </div>
+    </section>
+
+    <!-- Services -->
+    <section id="services" class="bg-night text-light py-5">
+      <div class="container-fluid">
+        <h2 class="text-center mb-5">Nos Services <span class="text-orange">informatiques</span></h2>
+        <div class="services-wrapper d-flex flex-wrap justify-content-center gap-4 px-3">
+
+          <div class="service-card">
+            <i class="bi bi-box-seam fs-1 text-orange mb-3"></i>
+            <h5>Vente d’équipements</h5>
+            <p>Switchs, routeurs, caméras, antennes réseau, ordinateurs, etc.</p>
+            <a href="ventes.html" class="plus-circle">+</a>
+          </div>
+
+          <div class="service-card">
+            <i class="bi bi-shield-lock fs-1 text-orange mb-3"></i>
+            <h5>Réseau Privé Virtuel (VPN)</h5>
+            <p>Accès sécurisé et privé à votre réseau depuis n'importe où.</p>
+            <a href="vpn.html" class="plus-circle">+</a>
+          </div>
+
+          <div class="service-card">
+            <i class="bi bi-wifi fs-1 text-orange mb-3"></i>
+            <h5>Couverture WiFi professionnelle</h5>
+            <p>Installation et optimisation d’un WiFi fiable et performant.</p>
+            <a href="wifi.html" class="plus-circle">+</a>
+          </div>
+
+          <div class="service-card">
+            <i class="bi bi-diagram-3 fs-1 text-orange mb-3"></i>
+            <h5>Architecture système réseau</h5>
+            <p>Conception et déploiement d’infrastructures réseau robustes.</p>
+            <a href="architecture.html" class="plus-circle">+</a>
+          </div>
+
+          <div class="service-card">
+            <i class="bi bi-cpu fs-1 text-orange mb-3"></i>
+            <h5>Solution informatique</h5>
+            <p>Solutions sur mesure pour les besoins IT de votre entreprise.</p>
+            <a href="solutions.html" class="plus-circle">+</a>
+          </div>
+
+          <div class="service-card">
+            <i class="bi bi-camera-video fs-1 text-orange mb-3"></i>
+            <h5>Installation de caméra</h5>
+            <p>Surveillance vidéo pour renforcer la sécurité de vos locaux.</p>
+            <a href="camera.html" class="plus-circle">+</a>
+          </div>
+
+          <div class="service-card">
+            <i class="bi bi-telephone-inbound fs-1 text-orange mb-3"></i>
+            <h5>Téléphonie sur IP</h5>
+            <p>Systèmes VoIP modernes pour des communications efficaces.</p>
+            <a href="telephonie.html" class="plus-circle">+</a>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- À propos -->
+    <section id="apropos" class="why-choose-section">
+      <div class="container">
+        <h2 class="text-center mb-2">
+          Pourquoi choisir <span class="highlight-orange">UNLIMITED NETWORK</span><br>
+          <span class="highlight-orange">SOLUTIONS</span> ?
+        </h2>
+        <p class="subtitle text-center">Plus de 10 ans d'expertise au service de votre réussite technologique</p>
+        <div class="row g-4">
+          <div class="col-md-6 col-lg-4">
+            <div class="benefit-card h-100">
+              <div class="icon-wrapper"><i class="bi bi-award"></i></div>
+              <h3>Expertise Reconnue</h3>
+              <p>Une équipe certifiée avec plus de 10 ans d'expérience dans les solutions réseau robustes.</p>
+            </div>
+          </div>
+          <div class="col-md-6 col-lg-4">
+            <div class="benefit-card h-100">
+              <div class="icon-wrapper"><i class="bi bi-clock"></i></div>
+              <h3>Support 24/7</h3>
+              <p>Un support technique disponible 24h/24 et 7j/7 pour vos opérations.</p>
+            </div>
+          </div>
+          <div class="col-md-6 col-lg-4">
+            <div class="benefit-card h-100">
+              <div class="icon-wrapper"><i class="bi bi-gear"></i></div>
+              <h3>Solutions Sur Mesure</h3>
+              <p>Des solutions personnalisées adaptées à vos besoins et à votre budget.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Contact -->
+    <section id="contact" class="contact-section text-center py-5">
+      <div class="container">
+        <div class="text-white mb-4">
+          <h1 class="mb-2 text-white">Contactez-nous</h1>
+          <p>Prêt à transformer votre infrastructure IT ? Discutons de votre projet</p>
+        </div>
+        <div class="card p-4 rounded-3 shadow">
+          <div class="row">
+            <div class="col-lg-6 contact-info-column p-4">
+              <h2>Informations de contact</h2>
+              <ul class="list-unstyled text-white">
+                <li class="d-flex align-items-center mb-3">
+                  <i class="bi bi-geo-alt-fill me-3"></i>
+                  <div>
+                    <p class="mb-0">Abidjan</p>
+                    <p class="mb-0">Yopougon, Côte d'Ivoire</p>
+                  </div>
+                </li>
+                <li class="d-flex align-items-center mb-3">
+                  <i class="bi bi-telephone-fill me-3"></i>
+                  <p class="mb-0">+225 0769992113</p>
+                </li>
+                <li class="d-flex align-items-center mb-3">
+                  <i class="bi bi-envelope-fill me-3"></i>
+                  <p class="mb-0">obedlanseu09@gmail.com</p>
+                </li>
+              </ul>
+            </div>
+            <div class="col-lg-6 quote-form-column p-4">
+              <h2>Demande de devis</h2>
+              <!-- Formulaire connecté à Formspree -->
+              <form action="https://formspree.io/f/xwpnwdeo" method="POST">
+                <div class="mb-3"><input type="text" class="form-control" name="name" placeholder="Votre nom" required></div>
+                <div class="mb-3"><input type="email" class="form-control" name="email" placeholder="Votre email" required></div>
+                <div class="mb-3">
+                  <select class="form-select" name="service" required>
+                    <option selected disabled>Sélectionnez un service</option>
+                    <option value="Vente d’équipements">Vente d’équipements</option>
+                    <option value="Réseau Privé Virtuel (VPN)">Réseau Privé Virtuel (VPN)</option>
+                    <option value="Couverture WiFi professionnelle">Couverture WiFi professionnelle</option>
+                    <option value="Architecture système réseau">Architecture système réseau</option>
+                    <option value="Solution informatique">Solution informatique</option>
+                    <option value="Installation de caméra">Installation de caméra</option>
+                    <option value="Téléphonie sur IP">Téléphonie sur IP</option>
+                  </select>
+                </div>
+                <div class="mb-3"><textarea class="form-control" name="message" rows="4" placeholder="Décrivez votre projet" required></textarea></div>
+                <div class="d-grid gap-2">
+                  <button type="submit" class="btn btn-primary btn-orange">Envoyer la demande</button>
+                </div>
+              </form>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- Footer -->
+  <footer>
+    <div class="container">
+      <div class="row">
+        <div class="col-md-4 mb-3">
+          <h5>Unlimited Network Solutions</h5>
+          <p>Votre partenaire de confiance pour toutes vos solutions informatiques et réseaux.</p>
+        </div>
+        <div class="col-md-4 mb-3">
+          <h5>Liens rapides</h5>
+          <ul class="list-unstyled">
+            <li><a href="#accueil">Accueil</a></li>
+            <li><a href="#services">Nos services</a></li>
+            <li><a href="#apropos">À propos</a></li>
+            <li><a href="#contact">Contact</a></li>
+          </ul>
+        </div>
+        <div class="col-md-4 mb-3">
+          <h5>Suivez-nous</h5>
+          <a href="#"><i class="bi bi-facebook fs-4 me-2"></i></a>
+          <a href="#"><i class="bi bi-twitter fs-4 me-2"></i></a>
+          <a href="#"><i class="bi bi-linkedin fs-4"></i></a>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        © 2025 Unlimited Network Solutions - Tous droits réservés
+      </div>
+    </div>
+  </footer>
+
+  <!-- Bootstrap JS -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
