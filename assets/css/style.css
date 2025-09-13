@@ -1,0 +1,100 @@
+.navbar-brand span.easy {
+    font-weight: bold;
+    color: #212529;
+}
+
+.navbar {
+    background-color: #f8f9fa;
+}
+
+.nav-link {
+    color: #212529 !important;
+}
+
+.dropdown-toggle::after {
+    margin-left: 0.5rem;
+}
+
+/* Mega menu */
+.mega-menu {
+  width: 100%;
+  left: 0;
+  right: 0;
+  top: 100%;
+  border-radius: 0;
+  background: #fdfdfb;
+}
+
+.mega-menu h6 {
+  margin-bottom: 10px;
+}
+
+.mega-menu .dropdown-item {
+  color: #000;
+  font-size: 0.95rem;
+  padding: 4px 0;
+}
+
+.mega-menu .dropdown-item:hover {
+  text-decoration: underline;
+  background: none;
+  color: #0d6efd;
+}
+
+/* HERO SECTION */
+.hero {
+  background: url("../image/team.jpg") center/cover no-repeat;
+  height: 85vh;
+  position: relative;
+}
+
+.hero::before {
+  content: "";
+  position: absolute;
+  top: 0; left: 0; right: 0; bottom: 0;
+  background: rgba(0,0,0,0.5); /* effet foncé */
+}
+
+.hero .container {
+  position: relative;
+  z-index: 2;
+}
+/*SECTION SERVICES */
+/* Bleu nuit */
+.bg-night {
+  background-color: #0B1F3A !important;
+}
+
+.text-orange {
+  color: #FFA500 !important;
+}
+
+.service-card {
+  background-color: #ffffff;
+  color: #0B1F3A;
+  border-radius: 15px;
+  padding: 20px 30px;
+  min-width: 260px;
+  max-width: 300px;
+  text-align: center;
+  font-weight: bold;
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+}
+
+.service-card:hover {
+  transform: scale(1.05);
+  background-color: #FFA500;
+  color: #ffffff;
+}
+
+.service-card i {
+    font-size: 40px;
+    color: orange;
+    transition: color 0.3s ease;
+}
+
+.service-card:hover i {
+    color: white !important;
+}
+
